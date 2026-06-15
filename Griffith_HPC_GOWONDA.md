@@ -31,3 +31,24 @@ ssh n059
 source /usr/local/bin/s3proxy.sh
 ```
 
+## Working with conda env in PBS job
+
+### Method 1:
+```bash
+cd $PBS_O_WORKDIR 
+module load anaconda3/2024.06
+conda run -n r_env Rscript
+```
+ 
+### Method 2:
+```bash
+module load anaconda3/2024.06
+source /sw/anaconda3/2024.06/etc/profile.d/conda.sh
+conda activate r_env
+Rscript my_script.R
+```
+### Method 3: Recommended
+```bash
+source ~/.bashrc
+conda activate r_env
+```
