@@ -52,3 +52,9 @@ Rscript my_script.R
 source ~/.bashrc
 conda activate r_env
 ```
+
+
+## Preferred Queue for Job Submission
+Preferred job submission queues are:
+- workq  
+- legacyq
