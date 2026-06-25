@@ -52,9 +52,39 @@ Rscript my_script.R
 source ~/.bashrc
 conda activate r_env
 ```
-## Check the Job status in detail
+## Check the Job status 
+### Check the submitted job list in Gowonda
+```bash
+qstat -x -f -u username
+```
+
+### Check the Job status in detail
 ```bash
 qstat -f <id>.cadmin
+```
+
+## Job Submission in Gowonda
+
+### PBS
+```bash
+#!/bin/bash
+#PBS -N job_name
+#PBS -l walltime=01:00:00
+#PBS -q workq
+#PBS -l select=1:ncpus=10:mem=150GB
+#PBS -o file.out
+#PBS -e file.err
+#PBS -V
+
+cd $PBS_O_WORKDIR 
+
+source ~/.bashrc
+conda activate env
+```
+
+### Interactive job Gowonda submission
+```bash
+qsub -I -l select=1:ncpus=4:mem=100gb -l walltime=01:00:00 -q workq
 ```
 
 ## Preferred Queue for Job Submission
