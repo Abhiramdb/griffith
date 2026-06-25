@@ -52,7 +52,10 @@ Rscript my_script.R
 source ~/.bashrc
 conda activate r_env
 ```
-
+## Check the Job status in detail
+```bash
+qstat -f <id>.cadmin
+```
 
 ## Preferred Queue for Job Submission
 Preferred job submission queues are:
