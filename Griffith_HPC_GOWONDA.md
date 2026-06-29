@@ -62,6 +62,10 @@ qstat -x -f -u username
 ```bash
 qstat -f <id>.cadmin
 ```
+### Check the detailed Job Status
+```bash
+qstat -f -x
+```
 
 ## Job Submission in Gowonda
 
