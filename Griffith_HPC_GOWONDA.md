@@ -91,3 +91,8 @@ qsub -I -l select=1:ncpus=4:mem=100gb -l walltime=01:00:00 -q workq
 Preferred job submission queues are:
 - workq  
 - legacyq
+
+## Read more
+```
+https://griffith.atlassian.net/wiki/spaces/GHCD/pages/4030746/Griffith+HPC+Quickstart
+```
