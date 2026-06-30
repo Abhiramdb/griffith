@@ -90,6 +90,10 @@ conda activate env
 ```bash
 qsub -I -l select=1:ncpus=4:mem=100gb -l walltime=01:00:00 -q workq
 ```
+## HPC load
+```bash
+qstat -tan1
+```
 
 ## Preferred Queue for Job Submission
 Preferred job submission queues are:
@@ -100,3 +104,4 @@ Preferred job submission queues are:
 ```
 https://griffith.atlassian.net/wiki/spaces/GHCD/pages/4030746/Griffith+HPC+Quickstart
 ```
+
